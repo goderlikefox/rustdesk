@@ -52,7 +52,7 @@ jobs:
   build-rustdesk-ios:
     if: ${{ inputs.upload-artifact }}
     name: build rustdesk ios ipa
-    runs-on: ${{ matrix.job.os }}
+    runs-on: self-hosted
     needs: [generate-bridge]
     strategy:
       fail-fast: false
@@ -161,7 +161,7 @@ jobs:
   build-rustdesk-ios-selfhost:
     #if: ${{ inputs.upload-artifact }}
     if: false
-    runs-on: [self-hosted, macOS, ARM64]
+    runs-on: self-hosted
     needs: [generate-bridge]
     strategy:
       fail-fast: false
