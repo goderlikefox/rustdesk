@@ -74,7 +74,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          brew install nasm yasm
+          brew install nasm yasm jq
       - name: Checkout source code
         uses: actions/checkout@v4
       - name: Install flutter
