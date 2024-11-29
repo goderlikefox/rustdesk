@@ -162,7 +162,7 @@ jobs:
     #if: ${{ inputs.upload-artifact }}
     if: false
     runs-on: self-hosted
-    needs: [generate-bridge]
+    #needs: [generate-bridge]
     strategy:
       fail-fast: false
     steps:
