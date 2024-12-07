@@ -75,6 +75,8 @@ jobs:
       - name: Install dependencies
         run: |
           brew install nasm yasm jq
+          sudo xcodebuild -license accept
+          
       - name: Checkout source code
         uses: actions/checkout@v4
       - name: Install flutter
